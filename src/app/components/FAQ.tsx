@@ -16,7 +16,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="scroll-mt-24">
+    <section id="faq" className="scroll-mt-24 particles">
       <div className="container mx-auto max-w-6xl px-6 py-20">
         <div className="mx-auto w-fit rounded-full border border-white/10 bg-white/5 px-4 py-2 text-red-50/80">FAQ</div>
         <h2 className="mt-6 text-center text-5xl md:text-6xl font-extrabold tracking-tight text-red-100">

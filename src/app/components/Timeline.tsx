@@ -17,7 +17,7 @@ export default function Timeline({ stages = defaultStages, height=820 }: props) 
   );
 
   return (
-    <section id="timeline" className="py-20">
+    <section id="timeline" className="py-20 particles">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-center text-5xl md:text-6xl font-extrabold tracking-tight text-red-100">
           Journey Through Space

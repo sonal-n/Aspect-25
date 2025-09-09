@@ -22,47 +22,38 @@ export default function Navbar() {
   };
 
   return (
-    <nav
-      aria-label="Primary"
-      className="
-        sticky top-0 z-50 w-full
-        bg-[#160e0e]/90 backdrop-blur
-        border-b border-white/10
-        shadow-[0_10px_30px_-15px_rgba(0,0,0,0.85)]
-      "
+   <nav aria-label="Primary" className="sticky top-0 z-50 w-full bg-[#160e0e]/90 backdrop-blur">
+  <div className="relative flex w-full items-center justify-between h-20 px-3 sm:px-4 md:px-6 lg:px-8">
+    <button
+      onClick={() => scrollTo("home")}
+      className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-300"
+      aria-label="Go to home"
     >
-      <div className="flex w-full items-center justify-between py-4 px-3 sm:px-4 md:px-6 lg:px-8">
-        <button
-          onClick={() => scrollTo("home")}
-          className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-300"
-          aria-label="Go to home"
-        >
-          <Image
-            src="/aspect-logo.svg"
-            alt="Aspect '25 Logo"
-            width={130}
-            height={40}
-            priority
-            className="h-10 w-auto cursor-pointer"
-          />
-        </button>
+      <Image
+        src="/aspect-logo.svg"
+        alt="Aspect '25 Logo"
+        width={120}
+        height={32}
+        priority
+        className="block h-7 md:h-8 w-auto opacity-90"  
+      />
+    </button>
 
-        <ul className="flex items-center gap-8 text-lg font-medium text-red-50">
-          {items.map(({ id, label }) => (
-            <li key={id}>
-              <button
-                onClick={() => scrollTo(id)}
-                className="
-                  hover:text-red-300 transition-colors
-                  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-300
-                "
-              >
-                {label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+    <ul className="flex items-center gap-6 md:gap-8 text-base md:text-lg font-medium text-red-50 leading-none">
+      {items.map(({ id, label }) => (
+        <li key={id}>
+          <button
+            onClick={() => scrollTo(id)}
+            className="hover:text-red-300 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-300"
+          >
+            {label}
+          </button>
+        </li>
+      ))}
+    </ul>
+
+    <span className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-white/10" />
+  </div>
+</nav>
   );
 }
