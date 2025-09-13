@@ -17,14 +17,14 @@ const team: Person[] = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="scroll-mt-24 py-20 particles">
+    <section id="contact" className="scroll-mt-24 pt-30 py-20 particles">
       <div className="container mx-auto max-w-6xl px-6 text-center">
         <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/5 border border-white/10 text-red-50/80">
           <Users className="w-4 h-4" />
-          Meet our team
+          Contact Us
         </div>
 
-        <h2 className="mt-6 text-5xl md:text-6xl font-extrabold tracking-tight text-red-100">
+        <h2 className="mt-6 text-5xl md:text-6xl font-l tracking-tight text-red-100">
           Mission Control
         </h2>
         <p className="mt-3 text-red-50/80 max-w-3xl mx-auto">

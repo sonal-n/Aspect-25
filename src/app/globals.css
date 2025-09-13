@@ -1,19 +1,40 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@font-face {
+  font-family: 'Sakana';
+  src: url("/public/fonts/Sakana.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+:root{
+  --nav-h: 64px;         
 }
 
 @layer base {
-  html, body { background-color: #161515; }
+  h2 { font-family: var(--font-sakana), var(--font-inter), ui-sans-serif, system-ui; }
 }
+
+@media (max-width: 640px) {
+  :root { --nav-h: 64px; }
+}
+
+html{
+  scroll-padding-top: var(--nav-h, 72px); 
+}
+
+html:focus-within{
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: smooth; }
+}
+
 
 @layer utilities {
   @keyframes pulse-ring {
@@ -43,4 +64,12 @@ html {
   .animate-comet {
     animation: comet 2.6s ease-out infinite;
   }
+}
+.hero-vignette{
+  background:
+    radial-gradient(1200px 560px at 50% 0%, rgba(255,255,255,0.10), transparent),
+    linear-gradient(to bottom, rgba(0,0,0,0.30), rgba(0,0,0,0.25) 40%, rgba(11,11,12,0.85) 100%);
+}
+.fade-bottom{
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #161515);
 }

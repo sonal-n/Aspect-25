@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -22,17 +23,19 @@ export default function Footer() {
             </p>
 
             <div className="mt-4 flex items-center gap-3">
-              <a href="https://instagram.com" aria-label="Instagram"
+              <a href="https://whatsapp.com/channel/0029ValqqeV9hXFBFpk5N02o" aria-label="Whatsapp" className="rounded-full border border-white/10 p-2 text-red-50/80 hover:bg-white/10"><FaWhatsapp className="h-4 w-4" /></a>
+
+              <a href="https://www.instagram.com/teambccs/" aria-label="Instagram"
                  className="rounded-full border border-white/10 p-2 text-red-50/80 hover:bg-white/10">
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="https://facebook.com" aria-label="Facebook"
+              <a href="https://www.facebook.com/teambccs" aria-label="Facebook"
                  className="rounded-full border border-white/10 p-2 text-red-50/80 hover:bg-white/10">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="https://youtube.com" aria-label="YouTube"
+              <a href="https://www.linkedin.com/company/teambccs/posts/?feedView=all" aria-label="LinkedIn"
                  className="rounded-full border border-white/10 p-2 text-red-50/80 hover:bg-white/10">
-                <Youtube className="h-4 w-4" />
+                <Linkedin className="h-4 w-4" />
               </a>
             </div>
           </div>
@@ -76,22 +79,12 @@ export default function Footer() {
                 <span>Bandaranayake College, Gampaha</span>
               </li>
             </ul>
-
-            <div className="mt-5">
-              <a href="#contact"
-                 className="inline-flex items-center gap-2 rounded-full border border-sky-50 px-4 py-2 text-red-50 hover:text-red-200 hover:bg-neutral-800 transition">
-                Open a commlink
-              </a>
-            </div>
           </div>
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6 text-xs text-red-50/60 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Bandaranayake College Computer Society — ASPECT’25.</p>
           <div className="flex items-center gap-4">
-            <Link href="/rules" className="hover:text-red-200">Rules</Link>
-            <Link href="/code-of-conduct" className="hover:text-red-200">Code of Conduct</Link>
-            <Link href="/privacy" className="hover:text-red-200">Privacy</Link>
             <a href="#home" className="rounded-full border border-white/10 px-3 py-1 hover:bg-white/10">Back to top</a>
           </div>
         </div>

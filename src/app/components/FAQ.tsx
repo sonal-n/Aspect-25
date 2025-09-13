@@ -19,7 +19,7 @@ export default function FAQ() {
     <section id="faq" className="scroll-mt-24 particles">
       <div className="container mx-auto max-w-6xl px-6 py-20">
         <div className="mx-auto w-fit rounded-full border border-white/10 bg-white/5 px-4 py-2 text-red-50/80">FAQ</div>
-        <h2 className="mt-6 text-center text-5xl md:text-6xl font-extrabold tracking-tight text-red-100">
+        <h2 className="mt-6 text-center text-5xl md:text-6xl font-l tracking-tight text-red-100">
           Frequently Asked Questions
         </h2>
         <p className="mt-3 text-center text-red-50/70">Everything you need to know about ASPECT’25.</p>
