@@ -7,7 +7,7 @@ type ClientTrack = Pick<
   Track,
   | "slug" | "title" | "short" | "heroImg" | "heroBg" | "color" | "icon"
   | "overview" | "whatToBuild" | "deliverables" | "rules"
-  | "judging" | "eligibility" | "rulesDoc" | "resources" | "faq"
+  | "judging" | "eligibility" | "rulesDoc" | "resources"
 > & { rounds?: { title: string; bullets: string[] }[] };
 
 export default function TrackClient({ track }: { track: ClientTrack }) {
@@ -20,9 +20,8 @@ export default function TrackClient({ track }: { track: ClientTrack }) {
       { key: "rules", label: "Rules & Regulations" },
       { key: "judging", label: "Judging" },
       ...(t.eligibility?.length ? [{ key: "eligibility", label: "Eligibility" }] : []),
-      ...(t.faq?.length ? [{ key: "faq", label: "FAQ" }] : []),
     ],
-    [t.eligibility?.length, t.faq?.length]
+    [t.eligibility?.length]
   );
   const [tab, setTab] = useState<string>(tabs[0]?.key ?? "overview");
 
@@ -93,17 +92,6 @@ export default function TrackClient({ track }: { track: ClientTrack }) {
             <ul className="list-disc pl-6 space-y-2 text-white/80">
               {t.eligibility.map((e, i) => <li key={i}>{e}</li>)}
             </ul>
-          ) : null}
-
-          {tab === "faq" && t.faq?.length ? (
-            <div className="space-y-6">
-              {t.faq.map((f, i) => (
-                <div key={i}>
-                  <div className="font-medium">{f.q}</div>
-                  <div className="text-white/80">{f.a}</div>
-                </div>
-              ))}
-            </div>
           ) : null}
         </div>
       </div>

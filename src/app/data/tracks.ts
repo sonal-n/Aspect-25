@@ -16,7 +16,6 @@ export type Track = {
   eligibility?: string[];
   rulesDoc?: string;
   resources?: { label: string; href: string }[];
-  faq?: { q: string; a: string }[];
 };
 
 export const tracks: Track[] = [
@@ -56,7 +55,6 @@ export const tracks: Track[] = [
     eligibility: ["Open to Grades 9–13"],
     rulesDoc: "/docs/ASPECT25-Rules.pdf",
     resources: [{ label: "Brand grids", href: "https://example.com" }],
-    faq: [{ q: "Can I submit sketches?", a: "Yes, include them in the ZIP." }]
   },
   {
     slug: "web-development",
@@ -93,7 +91,6 @@ export const tracks: Track[] = [
     ],
     eligibility: ["Open to Grades 9–13"],
     rulesDoc: "/docs/ASPECT25-Rules.pdf",
-    faq: [{ q: "Can I use frameworks?", a: "Yes, any frontend stack." }]
   },
   {
     slug: "video-editing",
@@ -162,7 +159,6 @@ export const tracks: Track[] = [
     judging: [{ label: "Round Scores", weight: 100 }],
     eligibility: ["Open to Grades 9–13"],
     rulesDoc: "/docs/ASPECT25-Rules.pdf",
-    faq: [{ q: "Team size?", a: "2–3 members." }]
   }
 ];
 
