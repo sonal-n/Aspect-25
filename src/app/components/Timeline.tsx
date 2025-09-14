@@ -51,7 +51,7 @@ export default function Timeline({ stages = defaultStages }: Props) {
   if (!stages.length) return null;
 
   return (
-    <section id="timeline" className="py-16 md:py-20 particles">
+    <section id="timeline" className="mt-6 particles">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-l tracking-tight text-red-100">
           Journey Through Space

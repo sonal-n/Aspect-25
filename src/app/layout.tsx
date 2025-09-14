@@ -14,7 +14,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="h-full">
       <body className={`${sakana.variable} ${inter.variable} antialiased min-h-screen bg-[#160e0e]`}>
         <Navbar />
-        <div className="pt-[var(--nav-h)]">{children}</div>
+        <div className="pt-[var(--nav-h)]">
+          {children}</div>
       </body>
     </html>
   );

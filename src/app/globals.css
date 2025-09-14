@@ -1,41 +1,78 @@
 @import "tailwindcss";
-
 @font-face {
   font-family: 'Sakana';
   src: url("/public/fonts/Sakana.ttf") format("truetype");
   font-style: normal;
   font-display: swap;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 :root{
-  --nav-h: 64px;         
+  --nav-h: 64px;      
+   --scroll-size: 10px;                         
+  --scroll-radius: 999px;                       
+  --scroll-thumb: rgba(255,255,255,.35);         
+  --scroll-track: rgba(255,255,255,.08);     
+}
+*{
+  scrollbar-width: thin;                        
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+*::-webkit-scrollbar{
+  width: var(--scroll-size);
+  height: var(--scroll-size);                  
+}
+*::-webkit-scrollbar-track{
+  background: var(--scroll-track);
+}
+*::-webkit-scrollbar-thumb{
+  background-color: var(--scroll-thumb);
+  border-radius: var(--scroll-radius);
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-corner{
+  background: transparent;
+}
+html{ scrollbar-gutter: stable both-edges; }
+@layer utilities {
+  .scrollbar-xs { --scroll-size: 6px;  }
+  .scrollbar-sm { --scroll-size: 8px;  }
+  .scrollbar-md { --scroll-size: 12px; }
+  .scrollbar-lg { --scroll-size: 16px; }
+
+  .ff-auto { scrollbar-width: auto; }
+  .ff-thin { scrollbar-width: thin; }
+  .ff-none { scrollbar-width: none; }
+
+  .scrollbar-none {
+    scrollbar-width: none;                
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;                         
+  }
+  .scrollbar-hover:hover { --scroll-size: 12px; }
 }
 
 @layer base {
-  h2 { font-family: var(--font-sakana), var(--font-inter), ui-sans-serif, system-ui; }
+  h2 { font-family: var(--font-sakana), var(--font-inter), ui-sans-serif, system-ui;
+  }
 }
-
 @media (max-width: 640px) {
   :root { --nav-h: 64px; }
 }
-
 html{
   scroll-padding-top: var(--nav-h, 72px); 
 }
-
 html:focus-within{
   scroll-behavior: smooth;
 }
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: smooth; }
+  html:focus-within {scroll-behavior: auto;}
 }
-
-
 @layer utilities {
   @keyframes pulse-ring {
     0% { box-shadow: 0 0 0 0 rgba(230,95,78,.55) }
@@ -45,13 +82,11 @@ html:focus-within{
   .animate-pulse-ring {
     animation: pulse-ring 2s ease-out infinite;
   }
-
   @keyframes comet {
   0%   { transform: rotate(-12deg) translate(0,0);    opacity: 0; }
   10%  { opacity: 1; }
   100% { transform: rotate(-12deg) translate(40px,-140px); opacity: 0; }
   }
-
   @keyframes comet-vert {
   0%   { transform: translate(0,0); opacity: 0; }
   10%  { opacity: 1; }
@@ -60,7 +95,6 @@ html:focus-within{
   .animate-comet-vert {
   animation: comet-vert 2.6s ease-out infinite;
   }
-
   .animate-comet {
     animation: comet 2.6s ease-out infinite;
   }
@@ -72,4 +106,21 @@ html:focus-within{
 }
 .fade-bottom{
   background: linear-gradient(to bottom, rgba(0,0,0,0), #161515);
+}
+.titleOnViewMore{
+  font-family: var(--font-sakana);
+}
+@keyframes btnShine {
+  0%   { transform: translateX(-130%); }
+  100% { transform: translateX(130%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-ok\:animate-none { animation: none !important; }
+}
+@keyframes tabIn {
+  0%   { opacity: 0; transform: translateY(8px) scale(.98); }
+  100% { opacity: 1; transform: translateY(0)   scale(1);   }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe\:no-anim { animation: none !important; transition: none !important; }
 }

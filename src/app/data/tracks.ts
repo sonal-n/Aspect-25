@@ -61,7 +61,7 @@ export const tracks: Track[] = [
     title: "Web Development",
     short: "Build a responsive, accessible single-page site.",
     heroImg: "/comp-covers/programming-web.png",
-    heroBg: "/comp-covers/web-bg.png",
+    heroBg: "/comp-covers/programming-bg.png",
     color: "#3BA5F2",
     overview: "Create a themed landing page with interactive section.",
     whatToBuild: [

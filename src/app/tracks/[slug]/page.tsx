@@ -41,17 +41,13 @@ export default function Page({ params }: Props) {
           heroImg: t.heroImg,
           heroBg: t.heroBg,
           color: t.color,
-          icon: t.icon,
           overview: t.overview,
           whatToBuild: t.whatToBuild,
           deliverables: t.deliverables,
           rules: t.rules,
           judging: t.judging,
           eligibility: t.eligibility ?? [],
-          rulesDoc: t.rulesDoc ?? "",
           resources: t.resources ?? [],
-          faq: t.faq ?? [],
-          rounds: (t as any).rounds ?? [],
         }}
       />
     </main>

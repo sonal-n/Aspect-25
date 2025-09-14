@@ -1,4 +1,3 @@
-// app/components/Categorycard.tsx
 "use client";
 
 import Image from "next/image";
@@ -34,7 +33,6 @@ export default function CategoryCard({
         hover:-translate-y-1 hover:shadow-[0_26px_90px_-24px_rgba(0,0,0,0.7)]
       "
     >
-      {/* Cover (scales on hover). Hidden if broken -> we show fallback */}
       {!broken && (
         <Image
           src={img}
@@ -51,7 +49,6 @@ export default function CategoryCard({
         />
       )}
 
-      {/* Fallback if image 404s/missing */}
       {broken && (
         <div
           className="absolute inset-0"
@@ -64,10 +61,8 @@ export default function CategoryCard({
         />
       )}
 
-      {/* Bottom vignette for readability */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/85 via-black/45 to-transparent" />
 
-      {/* Buttons */}
       <div className="absolute inset-x-3 bottom-3 flex items-center justify-between gap-2">
         <Link
           href={registerHref}

@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import FAQ from "./components/FAQ";
 import CategoryCard from "./components/Categorycard";
 import { tracks } from "./data/tracks";
-import { Sparkles, Calendar, Download, Scale } from "lucide-react";
+import { Sparkles, Calendar, Download, LayoutGrid } from "lucide-react";
 
 const ACCENTS: Record<string, string> = {
   "web-development": "#49b816",
@@ -58,7 +58,7 @@ export default function Home() {
 
               <div className="mt-8 flex flex-wrap items-center justify-center md:justify-start gap-4">
                 <a
-                  href="/register"
+                  href="#categories"
                   className="rounded-full px-7 py-3 text-base font-semibold text-black bg-gradient-to-r from-[#FDB44B] via-[#FF8A3D] to-[#E65F4E] shadow-[0_10px_40px_rgba(230,95,78,0.45)] hover:shadow-[0_14px_60px_rgba(230,95,78,0.6)] hover:scale-[1.02] active:scale-[.99] transition"
                 >
                   Register Now
@@ -121,8 +121,11 @@ export default function Home() {
         id="categories"
         className="scroll-mt-24 relative isolate bg-[#160e0e]"
       >
-        <div className="relative z-10 container mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-center text-5xl md:text-6xl font-l tracking-tight text-red-100">
+         <div className="relative z-10 container mx-auto max-w-6xl px-6 py-16 text-center">
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/5 border border-white/10 text-red-50/80">
+            <LayoutGrid className="w-4 h-4" /> Pick Your Path
+          </div>
+          <h2 className="mt-6 text-center text-5xl md:text-6xl font-l tracking-tight text-red-100">
             Choose a category
           </h2>
           <div className="mt-10 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
