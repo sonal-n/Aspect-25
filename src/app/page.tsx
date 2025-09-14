@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import Timeline from "./components/Timeline";
 import Contact from "./components/Contact";
 import Image from "next/image";
@@ -121,7 +120,7 @@ export default function Home() {
         id="categories"
         className="scroll-mt-24 relative isolate bg-[#160e0e]"
       >
-         <div className="relative z-10 container mx-auto max-w-6xl px-6 py-16 text-center">
+        <div className="relative z-10 container mx-auto max-w-6xl px-6 py-16 text-center">
           <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/5 border border-white/10 text-red-50/80">
             <LayoutGrid className="w-4 h-4" /> Pick Your Path
           </div>
