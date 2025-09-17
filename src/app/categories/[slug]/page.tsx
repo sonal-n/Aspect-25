@@ -7,9 +7,7 @@ type Props = { params: { slug: string } };
 
 export function generateMetadata({ params }: Props): Metadata {
   const t = getTrack(params.slug as any);
-  if (!t || t.slug === "gaming") {
-    return { title: "ASPECT’25" };
-  }
+  if (!t) return { title: "ASPECT’25" };
   return {
     title: t.title,
     description: t.short,
@@ -24,7 +22,7 @@ export function generateMetadata({ params }: Props): Metadata {
 
 export default function Page({ params }: Props) {
   const t = getTrack(params.slug as any);
-  if (!t || t.slug === "gaming") return notFound();
+  if (!t) return notFound();
 
   return (
     <main className="min-h-screen bg-[#160e0e]">

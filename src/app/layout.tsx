@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Providers from "./providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,7 +34,9 @@ export default function RootLayout({
         className={`${sakana.variable} ${inter.variable} antialiased min-h-screen bg-[#160e0e]`}
       >
         <Navbar />
-        <div className="pt-[var(--nav-h)]">{children}</div>
+        <div className="pt-[var(--nav-h)]">
+          <Providers>{children}</Providers>
+        </div>
       </body>
     </html>
   );

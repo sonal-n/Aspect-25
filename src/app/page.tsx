@@ -11,6 +11,7 @@ import { Sparkles, Calendar, LayoutGrid } from "lucide-react";
 import { useState, useEffect } from "react";
 import Loader from "./components/Loader";
 import Rules from "./components/Rules";
+import RegisterModal from "./components/RegisterModal";
 
 const ACCENTS: Record<string, string> = {
   "web-development": "#49b816",
@@ -20,18 +21,37 @@ const ACCENTS: Record<string, string> = {
   "graphic-design": "#FDB44B",
 };
 
+type CatSlug = "web" | "video" | "graphic" | "quiz" | "gaming";
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [regOpen, setRegOpen] = useState(false);
+  const [regCat, setRegCat] = useState<CatSlug | undefined>();
+
+  function toCat(slug: string): CatSlug {
+    switch (slug) {
+      case "web-development":
+        return "web";
+      case "video-editing":
+        return "video";
+      case "graphic-design":
+        return "graphic";
+      case "quiz":
+        return "quiz";
+      case "gaming":
+        return "gaming";
+      default:
+        return "web";
+    }
+  }
+
+  const openRegister = (trackSlug: string) => {
+    setRegCat(toCat(trackSlug));
+    setRegOpen(true);
+  };
 
   useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      window.location.hash === "#categories"
-    ) {
-      setLoading(false);
-    } else {
-      setLoading(false);
-    }
+    setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -40,10 +60,13 @@ export default function Home() {
       typeof window !== "undefined" &&
       window.location.hash === "#categories"
     ) {
-      const el = document.getElementById("categories");
-      el?.scrollIntoView({ behavior: "auto", block: "start" });
+      document
+        .getElementById("categories")
+        ?.scrollIntoView({ behavior: "auto", block: "start" });
     }
   }, [loading]);
+
+  const REVEAL_AT = "2025-09-19T18:00:00+05:30";
 
   return (
     <>
@@ -52,12 +75,7 @@ export default function Home() {
         <>
           <main
             id="home"
-            className="
-              relative isolate
-              h-[calc(100dvh-var(--nav-h))]
-              overflow-hidden
-              bg-[#160e0e]
-            "
+            className="relative isolate h-[calc(100dvh-var(--nav-h))] overflow-hidden bg-[#160e0e]"
           >
             <Image
               src="/aspect-launch.jpg"
@@ -165,19 +183,25 @@ export default function Home() {
                   return (
                     <CategoryCard
                       key={t.slug}
+                      slug={t.slug}
                       title={t.title}
                       img={img}
-                      detailsHref={
-                        isMystery ? undefined : `/categories/${t.slug}`
-                      }
-                      registerHref={`/register?cat=${t.slug}`}
+                      detailsHref={`/categories/${t.slug}`}
                       accent={accent}
                       mystery={isMystery}
+                      revealAt={isMystery ? REVEAL_AT : undefined}
+                      onRegister={t.slug === "quiz" ? undefined : openRegister}
                     />
                   );
                 })}
               </div>
             </div>
+
+            <RegisterModal
+              open={regOpen}
+              onClose={() => setRegOpen(false)}
+              cat={regCat}
+            />
           </section>
 
           <section
