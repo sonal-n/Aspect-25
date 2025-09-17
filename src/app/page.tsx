@@ -50,9 +50,10 @@ export default function Home() {
     setRegOpen(true);
   };
 
-  useEffect(() => {
-    setLoading(false);
-  }, []);
+ useEffect(() => {
+  const t = setTimeout(() => setLoading(false), 5500); 
+  return () => clearTimeout(t);
+}, []);
 
   useEffect(() => {
     if (
@@ -84,6 +85,8 @@ export default function Home() {
               priority
               sizes="100vw"
               className="absolute inset-0 -z-20 h-full w-full object-cover object-[50%_68%] brightness-[.72] contrast-[1.05] pointer-events-none select-none"
+              onLoadingComplete={() => setLoading(false)}
+               onError={() => setLoading(false)}
             />
             <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/50 to-[#160e0e]/75" />
             <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_50%_20%,transparent_40%,rgba(0,0,0,0.75)_100%)]" />
