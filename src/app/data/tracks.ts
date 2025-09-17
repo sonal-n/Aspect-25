@@ -22,102 +22,160 @@ export const tracks: Track[] = [
   {
     slug: "graphic-design",
     title: "Graphic Design",
-    short: "Create a cohesive visual identity for a fictional event/brand.",
+    short: "Create cosmic visuals around the theme “Space Aspects.”",
     heroImg: "/comp-covers/graphic-web.png",
     heroBg: "/comp-covers/graphic-bg.png",
     color: "#E65F4E",
-    overview: "Design a mini brand system presented as a poster set and socials.",
+    overview:
+      "Embark on a creative journey beyond the stars. The ASPECT Intra-School Graphic Designing Competition, hosted by Bandaranayake College and organized by TeamBCCS, invites young designers to explore the mysteries of space through digital artistry. Bring galaxies, planets, and cosmic wonders to life—and shine among the stars with your creativity.",
     whatToBuild: [
-      "Logo and lockup",
-      "Color palette and type pairing",
-      "A3 poster + Instagram post + story",
-      "Brand usage sheet (1 page)"
+      "At least three still images aligned to the “Space Aspects” theme",
+      "Use cosmic visual language (galaxies, planets, nebulae, starfields)",
+      "Prepare for poster and social display",
     ],
-    deliverables: [
-      "Exported PNG/JPG for posters and socials",
-      "One PDF with brand usage sheet",
-      "Source file ZIP (PSD/AI/XD/Figma export)"
-    ],
+    deliverables: ["3+ images in PNG or JPG", "Resolutions: 1800×2240 and 1500×1500"],
     rules: [
-      "All submissions must be original and created during the competition period.",
-      "Team size: 1–4 members. Cross-school teams are not allowed.",
-      "Use of AI assistants is allowed only for ideation; generated assets must be disclosed.",
-      "Plagiarism, hate speech, and NSFW content lead to disqualification.",
-      "Late submissions are not accepted unless organizers announce an extension.",
-      "Judges’ decisions are final."
+      "Theme is mandatory: “Space Aspects.”",
+      "No copyrighted materials without permission.",
+      "No offensive, violent, or inappropriate content.",
+      "Work must be done by the competitor without external help.",
+      "Any form of cheating leads to disqualification.",
+      "Using AI designing tools for designing leads to disqualification.",
     ],
     judging: [
-      { label: "Concept & Story", weight: 30 },
-      { label: "Craft & Consistency", weight: 30 },
-      { label: "Originality", weight: 25 },
-      { label: "Presentation", weight: 15 }
+      { label: "Creativity & Originality", weight: 25 },
+      { label: "Relevance to the Theme", weight: 20 },
+      { label: "Visual Appeal & Consistency", weight: 25 },
+      { label: "Use of Resources", weight: 15 },
+      { label: "Uniqueness", weight: 15 },
     ],
-    eligibility: ["Open to Grades 9–13"],
-    rulesDoc: "/docs/ASPECT25-Rules.pdf",
-    resources: [{ label: "Brand grids", href: "https://example.com" }],
+    eligibility: [
+      "Open to Bandaranayake College students (Grades 6–13)",
+      "Junior: Grades 6–9",
+      "Senior: Grades 10–13",
+    ],
+    resources: [
+      { label: "Register Now", href: "https://forms.gle/your-form-id" },
+      { label: "Contact TeamBCCS", href: "mailto:aspectcompetition@school.edu" },
+    ],
   },
+
   {
     slug: "web-development",
     title: "Web Development",
-    short: "Build a responsive, accessible single-page site.",
+    short: "Build a fully functional site around the theme “Space Elevator”.",
     heroImg: "/comp-covers/programming-web.png",
     heroBg: "/comp-covers/programming-bg.png",
     color: "#3BA5F2",
-    overview: "Create a themed landing page with interactive section.",
+    overview:
+      "The Aspect Intra-School Web Development Competition invites students to design and build a fully functional website around the theme “Space Elevator”. This is your chance to combine creativity, coding, and innovation to launch ideas into the digital universe.",
     whatToBuild: [
-      "Hero with CTA",
-      "Features section",
-      "Interactive component",
-      "Contact form (no backend required)"
+      "Build a fully functional website about the “Space Elevator” theme.",
+      "Frontend may be HTML/CSS/JS or frameworks such as React, Angular, or Vue.",
+      "Optional backend (e.g., MERN/MEAN or others).",
+      "Simpler path: build from scratch using only HTML, CSS, and JavaScript.",
+      "You may use free-to-use graphics/assets (credit the source).",
+      "Technologies allowed: HTML, CSS, JavaScript; frameworks/libraries like Bootstrap, Tailwind, jQuery, AOS.",
+      "Editors: VS Code, Sublime Text, or any offline editor.",
     ],
     deliverables: [
-      "GitHub repo link",
-      "Deployed preview link",
-      "README with setup and credits"
+      "Project files or repository link (GitHub preferred).",
+      "2–10 minute video presentation showing features & functionality, theme alignment (Space Elevator), and user experience.",
+      "Upload the video to YouTube/Google Drive and share the link with your submission.",
+      "Submit everything before the deadline.",
     ],
     rules: [
-      "All submissions must be original and created during the competition period.",
-      "Team size: 1–4 members. Cross-school teams are not allowed.",
-      "Use of AI assistants is allowed only for ideation; generated assets must be disclosed.",
-      "Plagiarism, hate speech, and NSFW content lead to disqualification.",
-      "Late submissions are not accepted unless organizers announce an extension.",
-      "Judges’ decisions are final."
+      "Using pre-made templates or copied code leads to immediate disqualification.",
+      "Plagiarism or unmodified AI-generated code is not allowed.",
+      "All work must be original and authentic.",
+      "All entries must be submitted before the deadline.",
     ],
     judging: [
-      { label: "UX & Accessibility", weight: 30 },
-      { label: "Code Quality", weight: 30 },
-      { label: "Visual Design", weight: 25 },
-      { label: "Originality", weight: 15 }
+      { label: "Creativity & Theme Adhesion", weight: 20 },
+      { label: "Design & UI", weight: 25 },
+      { label: "Functionality", weight: 25 },
+      { label: "Code Quality", weight: 20 },
+      { label: "Innovation", weight: 10 },
     ],
-    eligibility: ["Open to Grades 9–13"],
-    rulesDoc: "/docs/ASPECT25-Rules.pdf",
+    eligibility: [
+      "Open to all students of Bandaranayake College.",
+      "External help is not permitted.",
+    ],
   },
+
   {
     slug: "video-editing",
     title: "Video Editing",
-    short: "Cut a 30–60s story with sound design.",
+    short: "Lights. Camera. Creativity.",
     heroImg: "/comp-covers/video-editing-web.png",
-    heroBg: "/comp-covers/video-bg.png",
-    color: "#B78BFF",
-    overview: "Edit from provided footage or your own with clear narrative.",
-    whatToBuild: ["30–60s edit", "Basic color and audio mix", "End card"],
-    deliverables: ["1080p MP4 (H.264)", "Project file ZIP", "Credits text"],
+    heroBg: "/comp-covers/video-editing-bg.png",
+    color: "#A12C2C",
+    overview: "Craft a cinematic story around the idea of a Space Elevator.",
+    whatToBuild: ["Create a 1–3 minute video interpreting the theme “Space Elevator”."],
+    deliverables: [
+      "Format: MP4/MOV/AVI",
+      "Resolution: 1080p (1920×1080)",
+      "Aspect ratio: 16:9",
+      "Length: 1–3 minutes",
+    ],
     rules: [
-      "All submissions must be original and created during the competition period.",
-      "Team size: 1–4 members. Cross-school teams are not allowed.",
-      "Use of AI assistants is allowed only for ideation; generated assets must be disclosed.",
-      "Plagiarism, hate speech, and NSFW content lead to disqualification.",
-      "Late submissions are not accepted unless organizers announce an extension.",
-      "Judges’ decisions are final."
+      "Original work only. Using copyrighted material without permission will lead to disqualification.",
+      "No offensive, violent, or inappropriate content.",
+      "No external help; the edit must be your own work.",
+      "Submit your entry via the provided form before the deadline.",
+    ],
+    eligibility: [
+      "Open to Bandaranayake College students",
+      "Junior: Grades 6–9",
+      "Senior: Grades 10–13",
     ],
     judging: [
-      { label: "Story & Pace", weight: 35 },
-      { label: "Edit & Transitions", weight: 30 },
-      { label: "Audio & Color", weight: 20 },
-      { label: "Originality", weight: 15 }
+      { label: "Creativity & Originality", weight: 20 },
+      { label: "Relevance to the Theme", weight: 20 },
+      { label: "Visual Appeal & Style Consistency", weight: 20 },
+      { label: "Use of Resources", weight: 20 },
+      { label: "Uniqueness", weight: 20 },
     ],
-    rulesDoc: "/docs/ASPECT25-Rules.pdf"
   },
+
+  {
+    slug: "quiz",
+    title: "Quiz",
+    short: "Show your speed, accuracy, and teamwork across rounds.",
+    heroImg: "/comp-covers/quiz-web.png",
+    heroBg: "/comp-covers/quiz-bg.png",
+    color: "#A78BFA",
+    overview:
+      "The ASPECT Intra-School Quiz Competition challenges students’ knowledge, speed, and teamwork across three exciting rounds. From quick-fire questions to the grand finale, this is your chance to prove your brilliance and claim the spotlight.",
+    whatToBuild: [],
+    deliverables: [],
+    rules: [
+      "Team: Each team must have 5 members.",
+      "Team: All members must be current students of Bandaranayake College Gampaha.",
+      "Category: Junior Division — Grades 6–9.",
+      "Category: Senior Division — Grades 10–13.",
+      "Format: Round 1 — Online preliminary quiz.",
+      "Format: Semi-Final — Online session for selected teams.",
+      "Format: Final Round — Grand Finale held live at the main ASPECT’25 event.",
+      "Guideline: Dates and schedules will be informed in advance.",
+      "Guideline: Online rounds will be conducted via Zoom breakout rooms.",
+      "Guideline: Teams must ensure a stable internet connection during online rounds.",
+      "Guideline: Any form of malpractice or external assistance will result in disqualification.",
+      "Guideline: Decisions made by the judges are final.",
+      "Judging: Round 1 scores decide who moves to the semi-final.",
+      "Judging: Semi-final winners advance to the grand finale.",
+      "Judging: Judges assess accuracy, speed, and teamwork.",
+      "Participation: Teams must register before the deadline.",
+      "Participation: Further details (dates, links, instructions) will be shared with team leaders via email.",
+    ],
+    judging: [
+      { label: "Accuracy", weight: 40 },
+      { label: "Speed", weight: 30 },
+      { label: "Teamwork", weight: 30 },
+    ],
+    eligibility: ["Open to Bandaranayake College students"],
+  },
+
   {
     slug: "gaming",
     title: "Gaming",
@@ -125,46 +183,39 @@ export const tracks: Track[] = [
     heroImg: "/comp-covers/gaming-web.png",
     heroBg: "/comp-covers/gaming-bg.png",
     color: "#E67E22",
-    overview: "Tournament format announced on match day.",
-    whatToBuild: ["Team registration", "Match presence", "Proof of results"],
-    deliverables: ["Team roster", "Contact handle", "Screenshots if requested"],
-    rules: [
-      "All submissions must be original and created during the competition period.",
-      "Team size: 1–4 members. Cross-school teams are not allowed.",
-      "Use of AI assistants is allowed only for ideation; generated assets must be disclosed.",
-      "Plagiarism, hate speech, and NSFW content lead to disqualification.",
-      "Late submissions are not accepted unless organizers announce an extension.",
-      "Judges’ decisions are final."
+    overview:
+      "The Aspect Intra-School Gaming Competition brings together the best gamers of Bandaranayake College for a thrilling showdown of skill, strategy, and reflexes. Step into the arena, compete with your peers, and prove who truly dominates the digital battlefield!",
+    whatToBuild: [
+      "Official game titles will be announced prior to the competition.",
+      "Matches will follow standard competitive formats.",
+      "Modes: 1v1 or Team Battles, depending on the title.",
+      "Time limits and scoring methods will be pre-defined.",
     ],
-    judging: [{ label: "Match Results", weight: 100 }],
-    rulesDoc: "/docs/ASPECT25-Rules.pdf"
+    deliverables: [
+      "Register before the deadline via the official form.",
+      "For team games, the captain must submit player details in advance.",
+      "Be present and ready at the allotted match time.",
+    ],
+    rules: [
+      "Any form of cheating, hacking, or exploiting bugs will result in immediate disqualification.",
+      "Offensive behavior, abusive language, or misconduct will not be tolerated.",
+      "Participants must follow referee/judge instructions at all times.",
+      "Fair play and good sportsmanship are mandatory.",
+    ],
+    judging: [
+      { label: "Skill", weight: 40 },
+      { label: "Strategy", weight: 30 },
+      { label: "Teamwork", weight: 20 },
+      { label: "Sportsmanship", weight: 10 },
+    ],
+    eligibility: [
+      "Open to all students of Bandaranayake College.",
+      "Participants compete individually or in teams as specified by the game.",
+      "Fair play and good sportsmanship are required.",
+    ],
   },
-  {
-    slug: "quiz",
-    title: "Quiz",
-    short: "Tech and general-knowledge quiz with team rounds.",
-    heroImg: "/comp-covers/quiz-web.png",
-    heroBg: "/comp-covers/quiz-bg.png",
-    color: "#A78BFA",
-    overview: "Test speed and accuracy across MCQ, rapid-fire, and buzzer rounds.",
-    whatToBuild: ["Team of 2–3", "Register with school ID", "Be present for briefing"],
-    deliverables: ["Team list", "Student IDs", "Contact number"],
-    rules: [
-      "Teams must answer within the stated time per question.",
-      "Use of devices or external help during rounds is prohibited.",
-      "Ties will be settled by a sudden-death round.",
-      "Disruptive behavior results in disqualification.",
-      "Judges’ decisions are final."
-    ],
-    judging: [{ label: "Round Scores", weight: 100 }],
-    eligibility: ["Open to Grades 9–13"],
-    rulesDoc: "/docs/ASPECT25-Rules.pdf",
-  }
 ];
 
 export type TrackSlug = (typeof tracks)[number]["slug"];
-
 export const getAllTrackSlugs = (): TrackSlug[] => tracks.map((t) => t.slug);
-
-export const getTrack = (slug: TrackSlug): Track | undefined =>
-  tracks.find((t) => t.slug === slug);
+export const getTrack = (slug: TrackSlug): Track | undefined => tracks.find((t) => t.slug === slug);

@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-red-100 font-semibold">Mission Control</h3>
+            <h3 className="text-red-100 font-semibold">Contact Us</h3>
             <ul className="mt-4 space-y-3 text-red-50/80">
               <li className="flex items-start gap-2">
                 <Mail className="mt-0.5 h-4 w-4 opacity-70" />
@@ -76,7 +76,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 opacity-70" />
-                <span>Bandaranayake College, Gampaha</span>
+                <a href="https://maps.app.goo.gl/T7HuaW4wDwC7Z5ji8" className="hover:text-red-200">Bandaranayake College, Gampaha</a>
               </li>
             </ul>
           </div>

@@ -4,12 +4,12 @@ import { useState, useRef } from "react";
 type QA = { q: string; a: string };
 
 const faqs: QA[] = [
-  { q: "Question title #1", a: "Short placeholder answer text…" },
-  { q: "Question title #2", a: "Short placeholder answer text…" },
-  { q: "Question title #3", a: "Short placeholder answer text…" },
-  { q: "Question title #4", a: "Short placeholder answer text…" },
-  { q: "Question title #5", a: "Short placeholder answer text…" },
-  { q: "Question title #6", a: "Short placeholder answer text…" },
+  { q: "What is ASPECT’25?", a: "ASPECT’25 is the annual intra-school ICT competition of Bandaranayake College Gampaha, designed to showcase innovation, creativity, and teamwork among students." },
+  { q: "Why is ASPECT’25 held?", a: "The competition is organized to inspire students to think creatively, apply ICT knowledge in real-world challenges, and build confidence through friendly competition." },
+  { q: "How can I stay updated on ASPECT’25?", a: "All announcements will be shared through official school channels, ICT Club social media platforms, and notices in school." },
+  { q: "Where can I get technical assistance during the competitions?", a: "Technical support will be available on-site from the organizing committee and members of the Computer Society, who will guide participants if they face technical issues." },
+  { q: "What categories or events are included in ASPECT’25?", a: "ASPECT’25 features multiple segments such as coding challenges, design tasks, and innovation-driven ICT projects to bring out diverse skills." },
+  { q: "Are there rewards for winners?", a: "Definitely! Winners will be celebrated with exciting rewards and recognition — but the exact prizes will be revealed at the competition itself. Stay tuned!" },
 ];
 
 export default function FAQ() {

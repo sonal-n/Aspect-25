@@ -1,35 +1,30 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getTrack, getAllTrackSlugs, type TrackSlug } from "../../data/tracks";
+import { getTrack } from "../../data/tracks";
 import TrackClient from "./TrackClient";
 
-type Props = { params: { slug: TrackSlug } };
-
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return getAllTrackSlugs().map((slug) => ({ slug }));
-}
+type Props = { params: { slug: string } };
 
 export function generateMetadata({ params }: Props): Metadata {
-  const t = getTrack(params.slug);
-  if (!t) {
-    return { title: "Track not found • ASPECT’25", description: "Please choose a valid track." };
+  const t = getTrack(params.slug as any);
+  if (!t || t.slug === "gaming") {
+    return { title: "ASPECT’25" };
   }
   return {
-    title: `${t.title} • ASPECT’25`,
+    title: t.title,
     description: t.short,
     openGraph: {
-      title: `${t.title} • ASPECT’25`,
+      title: t.title,
       description: t.short,
       images: t.heroImg ? [{ url: t.heroImg }] : undefined,
     },
+    alternates: { canonical: `/categories/${t.slug}` },
   };
 }
 
 export default function Page({ params }: Props) {
-  const t = getTrack(params.slug);
-  if (!t) notFound();
+  const t = getTrack(params.slug as any);
+  if (!t || t.slug === "gaming") return notFound();
 
   return (
     <main className="min-h-screen bg-[#160e0e]">
